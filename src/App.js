@@ -43,13 +43,13 @@ function App(props) {
       <Router>
         <Navbar/>
         <main className={classes.layout}>
-          <Route exact path='/home' component={Home} />
+          <Route exact path='/' component={Home} />
           <Route exact path='/submitwastage' component={SubmitWastage} />
           <Route exact path='/viewwastage' component={ViewWastage} />
         </main>
         <footer className={classNames(classes.footer, classes.layout)}>
           <Grid container spacing={32} justify="space-evenly">
-            Christopher Dang
+            Change The World - Infosys Hackathon 2019
           </Grid>
         </footer>
       </Router>

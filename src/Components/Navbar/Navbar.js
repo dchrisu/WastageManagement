@@ -10,7 +10,7 @@ import { withStyles } from '@material-ui/core/styles';
 const styles = theme => ({
   appBar: {
     position: 'relative',
-    backgroundColor: '#468c36',
+    backgroundColor: '#58c13f',
   },
   toolbarTitle: {
     flex: 1,
@@ -19,16 +19,16 @@ const styles = theme => ({
 
 class Navbar extends React.Component {
     render (){
-        const {classes} = this.props;
+        const {classes} = this.props; 
         return(
             <AppBar position="static" color="default" className={classes.appBar}>
                 <Toolbar>
                     <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-                        Wastage
+                        Waste-Free
                     </Typography>
-                    <a href="/submitwastage"><Link><Button>Submit Wastage</Button></Link></a>
-                    <a href="/viewwastage"></a><Link><Button>View Wastage</Button></Link></a>
-                    <a href="/login"><Link><Button color="primary" variant="outlined">
+                    <a href="/submitwastage"><Link to ="/submitwastage"><Button>Submit Trash</Button></Link></a>
+                    <a href="/viewwastage"><Link to ="/viewwastage"><Button>View Trash</Button></Link></a>
+                    <a href="/login"><Link to ="/login"><Button color="primary" variant="outlined">
                         Login
                     </Button></Link></a>
                 </Toolbar>
