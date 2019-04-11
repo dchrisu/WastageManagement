@@ -21,13 +21,6 @@ class ViewWastage extends React.Component {
         data: [{recycle: 4, waste: 2},{recycle: 4, waste: 2}],
     };
 
-    updateRecycleAndWaste(){
-        this.state.data.map(row => (
-            this.setState({recycle: this.state.recycle + row.recycle}),
-            this.setState({recycle: this.state.waste + row.waste})
-        ))
-    }
-
     componentDidMount(){
         var today = new Date();
         this.state.data = today.getDate();
@@ -43,7 +36,6 @@ class ViewWastage extends React.Component {
     
     render (){
         const {classes} = this.props;
-        this.updateRecycleAndWaste();
         return(
             <div class = "container">
                 <h1 style = {{textAlign: 'center'}}>View Today's Wastage</h1>
@@ -55,9 +47,9 @@ class ViewWastage extends React.Component {
                     chartType="PieChart"
                     loader={<div>Loading Chart</div>}
                     data={[
-                        ['Type', 'Weight'],
-                        ['Recycle (in lbs)', this.state.recycle],
-                        ['Waste (in lbs)', this.state.waste],
+                        ['Type', 'Weight (in kg)'],
+                        ['Recycle (in kg)', this.state.recycle],
+                        ['Waste (in kg)', this.state.waste],
                     ]}
                     options={{
                         title: 'Total Wastage',

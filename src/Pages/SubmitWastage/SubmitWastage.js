@@ -69,7 +69,7 @@ class SubmitWastage extends React.Component {
         .then(res => res.json())
         .then(this.handleNext)
         .catch(err => console.log(err))
-        this.setState(this.state.current, this.state.current++)
+        .then(this.setState({current: this.state.current+1}))
     };
 
     render (){
@@ -94,7 +94,7 @@ class SubmitWastage extends React.Component {
                     <TextField
                     id="standard-name"
                     label="ZIPcode"
-                    value={this.state.date}
+                    value={this.state.ZIPcode}
                     onChange={this.handleChange('zipcode')}
                     className={classNames(classes.textField, classes.dense)}
                     margin="normal"
@@ -102,7 +102,7 @@ class SubmitWastage extends React.Component {
 
                     <TextField
                     id="standard-dense"
-                    label="Recycle"
+                    label="Recycle (in kg)"
                     onChange={this.handleChange('recycle')}
                     className={classNames(classes.textField, classes.dense)}
                     margin="normal"
@@ -110,7 +110,7 @@ class SubmitWastage extends React.Component {
 
                     <TextField
                     id="standard-dense"
-                    label="Waste"
+                    label="Waste (in kg)"
                     onChange={this.handleChange('waste')}
                     className={classNames(classes.textField, classes.dense)}
                     margin="dense"
