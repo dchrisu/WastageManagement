@@ -19,18 +19,9 @@ class Navbar extends React.Component {
     render (){
         const {classes} = this.props;
         return(
-            <AppBar position="static" color="default" className={classes.appBar}>
-                <Toolbar>
-                    <Typography variant="h6" color="inherit" noWrap className={classes.toolbarTitle}>
-                        Wastage
-                    </Typography>
-                    <Button>Submit Wastage</Button>
-                    <Button>View Wastage</Button>
-                    <Button color="primary" variant="outlined">
-                        Login
-                    </Button>
-                </Toolbar>
-            </AppBar>
+            <div class = "container">
+              <h1 style = {{textAlign: 'center'}}>Welcome to Waste-Free!</h1>
+            </div>
         )
     }
 }
